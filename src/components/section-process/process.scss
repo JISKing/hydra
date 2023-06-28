@@ -1,0 +1,214 @@
+.processCon {
+  margin-top: 9px auto 0px auto;
+  padding-top: 60px;
+  .howWeBuild {
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      h2 {
+        font-size: 36px;
+        span {
+          line-height: 65px;
+          font-weight: 300;
+        }
+      }
+    }
+    .arrowProcess {
+      margin-left: 10px;
+      height: 93px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    p {
+      width: 652px;
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+  .stepsCon {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 90px;
+    .stepsNum {
+      border-radius: 50%;
+      width: 159px;
+      height: 159px;
+      border: 19.5px solid rgba(13, 13, 13, 0.32);
+      font-weight: bold;
+      font-size: 64px;
+      div {
+        background: linear-gradient(251.27deg, #c0b7e8 12.87%, #8176af 89.33%);
+        width: 159px;
+        height: 159px;
+        border-radius: 50%;
+        color: #343045;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .titleSteps {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-around;
+    h3 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 197px;
+      font-size: 24px;
+      line-height: 34px;
+    }
+    .step1::before {
+      content: url("../../images/arrows/arrow-small-right-1.svg");
+      position: absolute;
+      left: -55px;
+      top: -17px;
+    }
+    .step2::before {
+      content: url("../../images/arrows/arrow-small-right-1.svg");
+      position: absolute;
+      left: -29px;
+      top: -17px;
+    }
+    .step3::before {
+      content: url("../../images/arrows/arrow-small-right-1.svg");
+      position: absolute;
+      left: -40px;
+      top: -17px;
+    }
+    .step4::before {
+      content: url("../../images/arrows/arrow-small-right-1.svg");
+      position: absolute;
+      left: -19px;
+      top: -17px;
+    }
+  }
+  .stepsConSwiper {
+    display: none;
+  }
+}
+
+@media (max-width: 1160px) {
+  .processCon {
+    padding-top: 30px;
+    .howWeBuild {
+      justify-content: space-around;
+      div {
+        .arrowProcess {
+          display: none;
+        }
+      }
+    }
+    .stepsCon {
+      .stepsNum {
+        width: 129px;
+        height: 129px;
+        font-size: 54px;
+        div {
+          width: 129px;
+          height: 129px;
+        }
+      }
+    }
+    .titleSteps {
+      h3 {
+        font-size: 20px;
+        width: 167px;
+      }
+      .steps {
+        text-align: center;
+      }
+      .step1::before {
+        content: none;
+      }
+      .step2::before {
+        content: none;
+      }
+      .step3::before {
+        content: none;
+      }
+      .step4::before {
+        content: none;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1000px) {
+  .processCon {
+    padding-top: 50px;
+    .howWeBuild {
+      div {
+        text-align: center;
+      }
+      p {
+        display: none;
+      }
+    }
+    .stepsCon{
+      display: none;
+    }
+    .titleSteps{
+      display: none;
+    }
+    .stepsConSwiper {
+      display: block;
+      max-width: 500px;
+      margin-top: 40px;
+      .stepSlide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 219px;
+        .stepsNumSwiper {
+          border-radius: 50%;
+          width: 159px;
+          height: 159px;
+          border: 19.5px solid rgba(13, 13, 13, 0.32);
+          font-weight: bold;
+          font-size: 64px;
+          div {
+            background: linear-gradient(
+              251.27deg,
+              #c0b7e8 12.87%,
+              #8176af 89.33%
+            );
+            width: 159px;
+            height: 159px;
+            border-radius: 50%;
+            color: #343045;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .stepsSwiper {
+          margin-top: 24px;
+          text-align: center;
+          font-size: 24px;
+            line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width: 500px){
+.processCon{
+  padding-top: 20px;
+  margin-top: -10px;
+  .howWeBuild{
+    div{
+      h2{
+        font-size: 26px;
+      }
+    }
+  }
+}
+}

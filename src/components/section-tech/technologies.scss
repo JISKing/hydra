@@ -1,0 +1,209 @@
+.technologies {
+  margin-top: 54px auto 0px auto;
+  padding-top: 60px;
+  position: relative;
+  .techListSwiper{
+    display: none;
+  }
+  .slidingCon {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 361px;
+    h2 {
+      margin-top: 108px;
+      font-size: 36px;
+      span {
+        font-weight: 300;
+      }
+    }
+    .buttonCon {
+      position: relative;
+      display: flex;
+      width: 100px;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+      margin-top: auto;
+      button {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(267.61deg, #c0b7e8 -0.6%, #8176af 98.31%);
+        border-radius: 50%;
+        border: none;
+      }
+      button:hover {
+        background: linear-gradient(267.61deg, #ffffff -0.6%, #ffffff 98.31%);
+      }
+      .buttonBorder {
+        position: absolute;
+        z-index: -1;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(14, 14, 14, 0.32);
+      }
+    }
+  }
+  .techList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .sizeLogos {
+      img {
+        filter: brightness(52%);
+      }
+      img:hover {
+        filter: brightness(80%);
+      }
+    }
+  }
+}
+.technologies::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 311px;
+  background-image: url(../../images/tech-section/tech-img.svg);
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
+  border-radius: 160px;
+  background-position: center;
+  z-index: -1;
+}
+
+
+@media (max-width: 1160px) {
+  .technologies {
+    padding-top: 30px;
+    .slidingCon{
+      h2{
+        margin-top: 148px;
+      }
+      .buttonCon{
+        margin-top: 80px;
+      }
+    }
+    .techList {
+      .sizeLogos {
+        display: flex;
+        justify-content: center;
+        img {
+          display: block;
+          width: 77%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .technologies::before {
+    background-position: calc(130px + 50%) center;
+    border-radius: 100px;
+  }
+}
+
+@media(max-width: 1000px) {
+  .technologies {
+    .techList{
+      display: none;
+    }
+    .techListSwiper {
+      display: block;
+      max-width: 500px;
+      margin-top: 50px;
+      .techSlide {
+        display: flex;
+        justify-content: center;
+        .sizeLogosSwiper {
+          img {
+            filter: brightness(52%);
+          }
+          img:active {
+            filter: brightness(80%);
+          }
+        }
+      }
+      .unreal{
+        padding-top: 50px;
+      }
+      .unity{
+        padding-top: 15px;
+      }
+      .oculus{
+        padding-top: 11px;
+      }
+      .vive{
+        padding-top: 0px;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .technologies{
+    .slidingCon{
+      justify-content: unset;
+      height: auto;
+      h2{
+       margin-top: 65px;
+       font-size: 25px;
+      }
+      .buttonCon{
+        margin-top: 43px;
+      }
+    }
+  }
+  .technologies::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 250px;
+    background-image: url(../../images/tech-section/tech-img.svg);
+  }
+}
+
+@media(max-width: 500px){
+  .technologies{
+    .slidingCon{
+      h2{
+       margin-top: 32px;
+       font-size: 20px;
+      }
+      .buttonCon{
+        display: none;
+      }
+    }
+    .techListSwiper{
+      margin-top: 60px;
+    }
+  }
+  .technologies::before {
+    display: none;
+  }
+  .technologies::after{
+    position: absolute;
+    z-index: -2;
+    content: "";
+    background-position:center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 60px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    height: 173px;
+    background-image: url(../../images/tech-section/back_500_px.svg);
+  }
+}

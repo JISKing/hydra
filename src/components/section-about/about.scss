@@ -1,0 +1,177 @@
+.aboutCon {
+  margin: 30px auto 0px auto;
+  padding-top: 60px;
+  h2 {
+    font-size: 36px;
+  }
+  span {
+    font-weight: 300;
+    line-height: 60px;
+  }
+  .introduction {
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      .arrowAbout {
+        margin-left: -15px;
+        height: 93px;
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+    p {
+      width: 652px;
+      font-size: 16px;
+      line-height: 25px;
+      margin-left: 20px;
+    }
+  }
+  .infoAboutCon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 101px;
+    .aboutPicture {
+      display: block;
+      width: 524px;
+      height: 557px;
+      margin-right: 20px;
+    }
+    .aboutHydra {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 630px;
+      p {
+        margin-top: 42px;
+        font-size: 16px;
+        line-height: 25px;
+      }
+      button {
+        width: 214px;
+        height: 48px;
+        background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+        border-radius: 40px;
+        font-weight: bold;
+        color: #343045;
+        border: none;
+        margin-top: 28px;
+      }
+      button:hover {
+        background: #302c42;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .aboutCon {
+    .introduction {
+      justify-content: space-around;
+      div {
+        .arrowAbout {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1160px) and (min-width: 1000px) {
+  .aboutCon {
+    margin-top: 80px;
+    padding-top: 30px;
+
+    .introduction {
+      justify-content: space-around;
+      div {
+        .arrowAbout {
+          display: none;
+        }
+      }
+    }
+    .infoAboutCon{
+      margin-top: 75px;
+      .aboutHydra{
+        p{
+          margin-top: 40px;
+        }
+        button{
+          margin-top: 92px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .aboutCon{
+    margin-top: 20px;
+    padding-top: 30px;
+    .introduction{
+      div{
+        text-align: center;
+      }
+      p{
+        display: none;
+      }
+    }
+    .infoAboutCon{
+      margin-top: 42px;
+      flex-direction: column;
+      .aboutPicture{
+        margin: 0;
+        max-width:100%;
+        width: unset;
+        height: auto;
+      }
+      .aboutHydra{
+        align-items: center;
+        h2{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 500px){
+  .aboutCon{
+    margin-top: 30px;
+    h2{
+      font-size: 26px;
+    }
+    .infoAboutCon{
+      margin-top: 36px;
+      .aboutPicture{
+        width: 337px;
+        height: auto;
+      }
+      .aboutHydra{
+        margin-top: 50px;
+        p{
+          margin-top: 0px;
+          font-size: 14px;
+        }
+        button{
+          width: 292px;
+          height: 52px;
+          margin-top: 34px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1300px){
+  .aboutCon .infoAboutCon .aboutHydra button:hover {
+    background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+    color: #343045;
+    border: none;
+    cursor: pointer;
+}
+}

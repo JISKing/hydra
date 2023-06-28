@@ -1,0 +1,243 @@
+// @media (min-width: 1201px) {
+//   header {
+//     .navMenu {
+//         .burgerLinks {
+//           display: none;
+//         }
+//     }
+//   }
+// }
+
+@media (min-width: 1161px) {
+  header {
+    .navMenu {
+        .burgerLinks {
+          display: none;
+        }
+    }
+  }
+}
+
+header {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    .logoSPINNER {
+      filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.25));
+      transition: transform 0.5s;
+    }
+  }
+  .logo:hover .logoSPINNER {
+    transform: rotate(360deg);
+  }
+
+  .navMenu {
+    display: flex;
+    column-gap: 41px;
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          transition: transform 0.2s;
+        }
+        a:hover {
+          transform: scale(1.2);
+          transform-origin: center;
+        }
+  }
+  .headButtons {
+    display: flex;
+    column-gap: 38px;
+    .contactUsButton {
+      background-color: #302c42;
+      width: 154px;
+      height: 48px;
+      border: 2px solid #ffffff;
+      border-radius: 40px;
+      font-weight: bold;
+    }
+    .contactUsButton:hover {
+      background-color: #ffffff;
+      color: #302c42;
+    }
+    .joinHydraButton {
+      color: #343045;
+      width: 155px;
+      height: 48px;
+      background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+      border-radius: 40px;
+      font-weight: bold;
+      border: none;
+    }
+    .joinHydraButton:hover {
+      background: #ffffff;
+      color: #302c42;
+    }
+  }
+  .burger {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1160px) {
+  header {
+    // padding-top: 30px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    .logo{
+      .logoSPINNER{
+        width: 65px;
+        height: 65px;
+      }
+    }
+    .navMenu {
+      position: fixed;
+      z-index: 11;
+      padding-top: 20px;
+      padding-left: 30px;
+      top: 0;
+      left: -120%;
+      width: 100%;
+      height: 100%;
+      transition: left 0.3s ease 0s;
+      background: linear-gradient(to right, #302C42,#302C42,#302c42ef, #302c42c5,#302c424a);
+      overflow: auto;
+      &._active {
+        left: 0;
+      }
+        display: flex;
+        flex-direction: column;
+          a{
+            font-size: 24px;
+          padding: 20px;
+          }
+
+          .burgerLinks {
+            display: block;
+          }
+    }
+    // .navMenu::before{
+    //   top: 0;
+    //   left: 0;
+    //   padding-left: 49px;
+    //   padding-top: 27px;
+    //   width: 100%;
+    //   background: linear-gradient(to right, #302C42,#302C42,#302c42ef, #302c42c5,#302c424a);
+    //   content: url(../../images/headerINFO/burgerLogo.svg);
+    //   position: fixed;
+    // }
+    .headButtons {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+      position: fixed;
+      z-index: 12;
+      top: 40px;
+      right: 4.16%;
+      width: 35px;
+      height: 30px;
+      cursor: pointer;
+      &._active {
+        height: 35px;
+        border-radius: 2px;
+        top: 40px;
+        span {
+          display: none;
+        }
+        &::before {
+          box-shadow: none;
+          top: 8.5px;
+          transform: rotate(-45deg) translate(-6px, 4px);
+          background: white;
+        }
+        &::after {
+          box-shadow: none;
+          bottom: 8.5px;
+          transform: rotate(45deg) translate(-6px, -4px);
+          background: white;
+        }
+      }
+
+      span {
+        background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+        top: 13.15px;
+        height: 3.7px;
+        width: 24px;
+        right: 0;
+        position: absolute;
+        border-radius: 40px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+    .scrolled {
+      top:40px;
+    }
+    .burger::before,
+    .burger::after {
+      content: "";
+      right: 0;
+      position: absolute;
+      height: 3.7px;
+      width: 33px;
+      transition: all 0.3s ease 0s;
+      background: linear-gradient(90deg, #c0b7e8 0%, #8176af 100%);
+      border-radius: 40px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .burger::before {
+      top: 2px;
+    }
+    .burger::after {
+      bottom: 2px;
+    }
+  }
+}
+
+
+
+@media (max-width: 1300px) {
+  header{
+    .logo:hover .logoSPINNER {
+      transform: unset;
+    }
+    .navMenu{
+      a:hover{
+        transform: scale(1) translateZ(0);
+      }
+      a:active{
+        text-decoration: underline;
+      }
+    }
+    .headButtons{
+      .contactUsButton:hover{
+        background: #302c42;
+        color: white;
+        cursor: pointer;
+      }
+      .joinHydraButton:hover{
+        color: #343045;
+        background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media(max-width: 500px){
+  header{
+    padding-top: 25px;
+    .logoHYDRA{
+      width: 65px;
+      height: auto;
+    }
+  }
+}
